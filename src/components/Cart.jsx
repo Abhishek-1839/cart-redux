@@ -27,7 +27,7 @@ const Cart = () => {
               <p>{product.description}</p>
               <p>Ratings : {product.rating} ⭐</p>
               <p>Price: $ {product.price}</p>
-              <p>Quantity: <select id="dropdown" 
+            <p>Quantity: <select id="dropdown" 
               value={product.quantity} 
               onChange={(e) => handleQuantityChange(product.id, e.target.value)} >
         <option value="1">1</option>
