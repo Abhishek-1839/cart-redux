@@ -27,7 +27,7 @@ const Cart = () => {
               <p>{product.description}</p>
               <p>Ratings : {product.rating} ⭐</p>
               <p>Price: $ {product.price}</p>
-              <p>Quantity: <input type="number" value={product.quantity} onChange={(e) => handleQuantityChange(product.id, e.target.value)} min="0" /></p>
+              <p>Quantity: <input type="number" value={product.quantity} onChange={(e) => handleQuantityChange(product.id, e.target.value)} min="1" /></p>
             </div>
           </div>
         ))}
