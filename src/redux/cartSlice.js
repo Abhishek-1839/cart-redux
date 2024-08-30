@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 import data from '../data/product.json';
 
-const initialState = data.map(product => ({ ...product, quantity: 0 }));
+const initialState = data.map(product => ({ ...product, quantity: 1 }));
 
 const cartSlice = createSlice({
   name: 'cart',
