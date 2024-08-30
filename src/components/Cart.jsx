@@ -9,7 +9,7 @@ const Cart = () => {
   const totals = useSelector((state) => state.totals);
 
   const handleQuantityChange = (id, quantity) => {
-    dispatch(updateQuantity({ id, quantity: parseInt(quantity) }));
+    dispatch(updateQuantity({ id, quantity: parseInt(quantity, 10) }));
   };
 
   useEffect(() => {
@@ -27,7 +27,21 @@ const Cart = () => {
               <p>{product.description}</p>
               <p>Ratings : {product.rating} ⭐</p>
               <p>Price: $ {product.price}</p>
-              <p>Quantity: <input type="number" value={product.quantity} onChange={(e) => handleQuantityChange(product.id, e.target.value)} min="0" /></p>
+              <p>Quantity: <select id="dropdown" 
+              value={product.quantity} 
+              onChange={(e) => handleQuantityChange(product.id, e.target.value)} >
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+      </select></p>
+               {/* <p>Quantity: {product.quantity}</p> */}
             </div>
           </div>
         ))}
